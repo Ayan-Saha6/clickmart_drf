@@ -17,7 +17,7 @@ urlpatterns = [
     # product list
     path('products/',ProductViews.ProductListView.as_view()),
     # Product detail
-    path('products/<int:pk>',ProductViews.ProductDetailView.as_view()),
+    path('products/<int:pk>/',ProductViews.ProductDetailView.as_view()),
 
 
     # Cart APIs
@@ -34,4 +34,7 @@ urlpatterns = [
 
     path('orders/',OrderViews.MyOrdersView.as_view()),    # to check user's own order lists
 
+     path('orders/<int:pk>/', OrderViews.OrderDetailView.as_view()),
+     
 ]
+
